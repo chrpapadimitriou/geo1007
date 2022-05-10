@@ -16,15 +16,6 @@ var map = L.map('map-canvas', { // eslint-disable-line no-undef
 });
 map.attributionControl.setPrefix('');
 
-var map = L.map('map').fitWorld();
-
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    tileSize: 512,
-    zoomOffset: -1
-}).addTo(map);
-
 // 1. BRT-Achtergrondkaart van PDOK:
 var options = { maxZoom: 14, attribution: 'Map data: <a href="http://www.pdok.nl">BRT Achtergrondkaart</a>' }
 var basemap_pdok = new L.tileLayer('https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/standaard/EPSG:28992/{z}/{x}/{y}.png', options);
